@@ -110,6 +110,19 @@ button:disabled {
     background-color: gray;
 }
 
+footer {
+  position: fixed;       /* fixa o footer */
+  bottom: 0;             /* coloca no fim da página */
+  left: 0;
+  width: 100%;           /* ocupa toda a largura */
+  text-align: center;    /* centraliza o texto */
+  background-color: transparent; /* ou defina uma cor se quiser */
+  color: white;          /* cor do texto */
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+
 @media screen and (max-width: 1250px) {
 
     h1 {

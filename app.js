@@ -1,10 +1,10 @@
 // Estado do jogo
 let listaDeNumerosSorteados = [];
-const numeroLimite = 10;           // <-- nome correto e constante
+const numeroLimite = 20;           // <-- nome correto e constante
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
-// Habilita voz somente após 1ª interação do usuário (autoplay policy)
+// Habilita voz
 let vozHabilitada = false;
 document.addEventListener('click', () => { vozHabilitada = true; }, { once: true });
 
@@ -39,7 +39,7 @@ function verificarChute() {
   }
 
   if (chute === numeroSecreto) {
-    exibirTextoNaTela('h1', 'Acertou!');
+    exibirTextoNaTela('h1', 'Parabéns, você Acertou!');
     const palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
     const mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}!`;
     exibirTextoNaTela('p', mensagemTentativas);
