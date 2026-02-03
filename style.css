@@ -7,12 +7,42 @@
 
 body {
     background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 100vh;
 }
 
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;                 /* ESSENCIAL */
+  display: flex;
+  justify-content: center; /* centraliza o conteúdo do projeto */
+  align-items: center;
+}
+
+.footer-minimal {
+  width: 100%;
+  padding: 20px 0;
+  background: transparent; /* sem cor por padrão */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 18px;  /* ← pode ajustar */
+  color: #333;      /* ← pode ajustar a cor */
+}
+
+.footer-logo {
+  width: 200px;     /* ← pode ajustar o tamanho */
+  height: auto;
+}
 
 body::before {
     background-image: url("img/code.png");
@@ -44,7 +74,6 @@ body::before {
 .container__conteudo {
     display: flex;
     align-items: center;
-    position: absolute;
     bottom: 0;
 }
 
@@ -96,8 +125,7 @@ h1 {
     padding-bottom: 3rem;
 }
 
-p,
-button {
+p, button {
     font-family: 'Inter', sans-serif;
 }
 
@@ -109,19 +137,6 @@ button {
 button:disabled {
     background-color: gray;
 }
-
-footer {
-  position: fixed;       /* fixa o footer */
-  bottom: 0;             /* coloca no fim da página */
-  left: 0;
-  width: 100%;           /* ocupa toda a largura */
-  text-align: center;    /* centraliza o texto */
-  background-color: transparent; /* ou defina uma cor se quiser */
-  color: white;          /* cor do texto */
-  font-size: 14px;
-  padding: 10px 0;
-}
-
 
 @media screen and (max-width: 1250px) {
 
